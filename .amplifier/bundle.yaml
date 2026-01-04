@@ -1,0 +1,20 @@
+# Example Combined Bundle
+# This demonstrates how to use lsp-typescript alongside foundation
+# 
+# To use this bundle:
+#   amplifier bundle use .amplifier/bundle.yaml
+#   amplifier run
+
+bundle:
+  name: foundation-with-typescript-lsp
+  version: 0.1.0
+  description: Foundation bundle with TypeScript/JavaScript code intelligence
+
+# Include both foundation and lsp-typescript
+includes:
+  - bundle: git+https://github.com/microsoft/amplifier-foundation@main
+  - bundle: git+https://github.com/robotdad/amplifier-bundle-lsp-typescript@main
+
+# Use foundation as the default behavior
+# This gives you all foundation tools + LSP TypeScript/JavaScript support
+default_behavior: foundation
