@@ -177,9 +177,8 @@ amplifier-bundle-lsp-typescript/
     typescript-code-intel.md     # TypeScript/JavaScript-specialized agent
   context/
     typescript-lsp.md            # TypeScript/JavaScript LSP usage guidance
-  .amplifier/
-    bundle.yaml                  # Example combined bundle (foundation + lsp-typescript)
-    settings.yaml                # Example settings file
+  examples/
+    combined-bundle.yaml         # Example: combining foundation + lsp-typescript
 ```
 
 ## Project Configuration
@@ -277,11 +276,11 @@ The TypeScript/JavaScript LSP Bundle follows Amplifier's core principles:
 - **Minimal** - Adds only TypeScript/JavaScript-specific configuration
 - **Universal** - Works for all JavaScript ecosystem projects
 
-## Example: Using in a Bundle
+## Example: Combining with Foundation Bundle
 
-Here's how to combine this bundle with Amplifier Foundation:
+To use this bundle alongside Amplifier Foundation, create a custom bundle in **your project directory**:
 
-**.amplifier/bundle.yaml:**
+**Your project's `.amplifier/bundle.yaml`:**
 ```yaml
 bundle:
   name: my-dev-bundle
@@ -299,6 +298,8 @@ Then activate it:
 amplifier bundle use .amplifier/bundle.yaml
 amplifier run
 ```
+
+**See also:** [`examples/combined-bundle.yaml`](examples/combined-bundle.yaml) for a complete working example.
 
 ## Contributing
 
